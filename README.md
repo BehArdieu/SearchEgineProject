@@ -30,3 +30,8 @@ GET /livres : Récupérer tous les livres
 
 GET /livres/recherche?q={query} : Recherche de livres
 
+PUT /livre/{isbn}: Modifier un livre
+
+DELETE /livre/{isbn}: Supprimer un livre
+
+
