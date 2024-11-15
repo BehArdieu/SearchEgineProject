@@ -36,3 +36,14 @@ PUT /livres/{isbn}: Modifier un livre
 DELETE /livres/{isbn}: Supprimer un livre
 
 
+# Equipes :
+ 
+1. Borel KAMSU
+2. Comlan ALOTIN
+3. El Hadj Oumar TALL
+4. Gael BELLANGER
+5. Gaetan KERVAREC
+6. Jules GREGOIRE
+7. Rabie GHARGHAR
+
+
