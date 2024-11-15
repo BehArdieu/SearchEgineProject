@@ -23,7 +23,10 @@ npm start
 4. Routes API
 
 POST /livre : Ajouter un livre
+
 GET /livre/{isbn}: Récupérer un livre par ISBN
+
 GET /livres : Récupérer tous les livres
+
 GET /livres/recherche?q={query} : Recherche de livres
 
