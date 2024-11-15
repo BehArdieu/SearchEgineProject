@@ -6,13 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@elastic/elasticsearch": "^8.15.2",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "searchengineproject": "file:"
   }
 }
