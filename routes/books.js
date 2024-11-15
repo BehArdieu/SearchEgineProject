@@ -1,7 +1,6 @@
 const express = require('express');
 const Book = require('../models/book');
 const router = express.Router();
-const client = require('../config/elasticsearch');
 
 
 // Initialiser l'index si nécessaire
