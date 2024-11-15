@@ -78,15 +78,16 @@ app.get("/livre/:isbn", async (req, res) => {
     try {
         const result = await client.search({
             index: "livre",
+            size: 1, // Limite les résultats à 1
             body: {
                 query: {
-                    match: { isbn }
+                    term: { isbn: isbn } // Requête exacte
                 }
             }
         });
-        console.log(result);
+
         if (result.hits.hits.length > 0) {
-            res.status(200).json(result.hits.hits[0]._source);
+            res.status(200).json(result.hits.hits[0]._source); // Retourne uniquement le contenu
         } else {
             res.status(404).json({ message: "Livre non trouvé" });
         }
@@ -96,24 +97,31 @@ app.get("/livre/:isbn", async (req, res) => {
     }
 });
 
+
 // Route pour récupérer tous les livres
 app.get("/livres", async (req, res) => {
     try {
         const result = await client.search({
             index: "livre",
+            size: 1000, // Limite le nombre de résultats (ajustez selon vos besoins)
             body: {
                 query: {
-                    match_all: {} // Récupère tous les documents de l'index
+                    match_all: {} // Requête pour récupérer tous les documents
                 }
             }
         });
-        const livres = result.hits.hits.map(hit => hit._source); // Extrait les données des livres
-        res.status(200).json(livres);
+
+        console.log(JSON.stringify(result, null, 2));
+
+
+        const books = result.hits.hits.map(hit => hit._source); // Extraire les données utiles
+        res.status(200).json(books);
     } catch (error) {
         console.error("Erreur lors de la récupération des livres:", error);
         res.status(500).json({ error: "Erreur lors de la récupération des livres" });
     }
 });
+
 
 // Démarrer le serveur
 app.listen(port, () => {
