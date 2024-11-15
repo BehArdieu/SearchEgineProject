@@ -13,7 +13,7 @@ API RESTful pour gérer un catalogue de livres avec Node.js, Express et Elastics
 2. Installez les dépendances :
 
 npm install
-
+edited
 3. Démarrer l'application
 
 docker compose up -d
@@ -22,16 +22,16 @@ npm start
 
 4. Routes API
 
-POST /livre : Ajouter un livre
+POST /livres : Ajouter un livre
 
-GET /livre/{isbn}: Récupérer un livre par ISBN
+GET /livres/{isbn}: Récupérer un livre par ISBN
 
 GET /livres : Récupérer tous les livres
 
 GET /livres/recherche?q={query} : Recherche de livres
 
-PUT /livre/{isbn}: Modifier un livre
+PUT /livres/{isbn}: Modifier un livre
 
-DELETE /livre/{isbn}: Supprimer un livre
+DELETE /livres/{isbn}: Supprimer un livre
 
 
