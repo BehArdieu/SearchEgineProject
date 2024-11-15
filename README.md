@@ -8,9 +8,10 @@ API RESTful pour gérer un catalogue de livres avec Node.js, Express et Elastics
 1. Clonez ce repository :
    
    git clone https://github.com/BehArdieu/SearchEgineProject.git
-   cd SeSearchEgineProject
+   
+   cd SearchEgineProject
 
-2. Installez les dépendances :
+3. Installez les dépendances :
 
 npm install
 edited
