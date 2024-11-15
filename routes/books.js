@@ -30,6 +30,9 @@ router.get('/', async (req, res) => {
     try {
         const result = await Book.findAll();
         const books = result.hits.hits.map(hit => hit._source);
+        if (books.length === 0) {
+            res.status(404).json({ message: 'Aucun livre trouvé' });
+        }
         res.status(200).json(books);
     } catch (error) {
         console.error('Erreur lors de la récupération des livres:', error);
